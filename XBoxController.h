@@ -68,8 +68,13 @@ namespace GamePad {
     private:
       // NOTE: All XInput function calls must be made through the XInputWrapper class
       XInputWrapper* xinput;
-      bool update_gamepadi();
+	  DWORD id;
+	  XINPUT_STATE *pState;
+	  XINPUT_VIBRATION *pVibration;
+      void update_gamepad();
+	  unsigned int dead_zone;
   };
 };
 
 #endif // XBOX_CONTROLLER_H
+
