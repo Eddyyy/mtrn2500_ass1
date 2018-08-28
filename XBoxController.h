@@ -69,8 +69,8 @@ namespace GamePad {
       // NOTE: All XInput function calls must be made through the XInputWrapper class
       XInputWrapper* xinput;
 	  DWORD id;
-	  XINPUT_STATE *pState;
-	  XINPUT_VIBRATION *pVibration;
+	  XINPUT_STATE pState;
+	  XINPUT_VIBRATION pVibration;
       void update_gamepad();
 	  unsigned int dead_zone;
   };
